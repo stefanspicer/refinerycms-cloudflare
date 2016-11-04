@@ -1,0 +1,33 @@
+en:
+  refinery:
+    plugins:
+      purges:
+        title: CloudFlare
+    cloudflare:
+      admin:
+        purges:
+          index:
+            title: CloudFlare
+    admin:
+      settings:
+        form:
+          cloudflare_domain:
+            title: Domain to Cache
+            settings_value_name: The domain that CloudFlare will be caching
+            hint: "This should be set automatically, but you can override it here"
+            example: "Enter the domain like: https://example.com"
+          cloudflare_auth_email:
+            title: Auth Email
+            settings_value_name: The email registered with your CloudFlare account
+            hint: This email will be used to authenticate over the CloudFlare API to flush the cache
+            example: "Enter your email address like: jack@work.com"
+          cloudflare_auth_api_key:
+            title: API Key
+            settings_value_name: The CloudFlare API key
+            hint: Log into the CloudFlare console to get this API key
+            example: "Enter the key like: d7ebb00873477887a11837460909287cfa7f438e1c"
+          cloudflare_zone:
+            title: Zone Identifier (Optional)
+            settings_value_name: The zone within CloudFlare
+            hint: The only way I know to get this currently is through the API.  It will be set on the first call to the API.
+            example: "Enter the identifier like: d7ebb00873477887a11837460909287cfa7f438e1c"

@@ -1,0 +1,42 @@
+<% content_for :admin_content do %>
+	<section id='admin-page-content' class='admin-index container-fluid'>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="admin-title"><%= t('.title') %></h2>
+        <div class="contextual-menu">
+          <div class="dropdown">
+            <button class="btn btn-link-gray" type="button">
+              <i class="icon icon-gear"></i> Options <span class="caret"></span>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <% setting_title = "Domain to Cache" %>
+              <a href="<%= refinery.edit_admin_setting_path(:cloudflare_domain) %>" role="menuitem"
+                class="dropdown-item open-modal"
+                data-modal-title="<%= setting_title %>">
+                <i class="icon icon-edit"></i> <%= setting_title %>
+              </a>
+              <% setting_title = "CloudFlare Auth Email" %>
+              <a href="<%= refinery.edit_admin_setting_path(:cloudflare_auth_email) %>" role="menuitem"
+                class="dropdown-item open-modal"
+                data-modal-title="<%= setting_title %>">
+                <i class="icon icon-edit"></i> <%= setting_title %>
+              </a>
+              <% setting_title = "CloudFlare API Key" %>
+              <a href="<%= refinery.edit_admin_setting_path(:cloudflare_auth_api_key) %>" role="menuitem"
+                class="dropdown-item open-modal"
+                data-modal-title="<%= setting_title %>">
+                <i class="icon icon-edit"></i> <%= setting_title %>
+              </a>
+              <% setting_title = "CloudFlare Zone" %>
+              <a href="<%= refinery.edit_admin_setting_path(:cloudflare_zone) %>" role="menuitem"
+                class="dropdown-item open-modal"
+                data-modal-title="<%= setting_title %>">
+                <i class="icon icon-edit"></i> <%= setting_title %>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	</section>
+<% end %>
