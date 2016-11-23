@@ -1,3 +1,4 @@
+require 'http'
 require 'refinerycms-core'
 
 module Refinery
